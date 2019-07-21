@@ -7,19 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="index2.css">
     <title>Title</title>
 </head>
 
 <body>
-    <div class="container col-5">
+    <div class="container col-4 form_div">
         <form id="myform col-sm">
             <div class="form-group">
-                <label for="exampleFormControlInput1">movie name</label>
-                <input type="text" class="form-control" id="movie_name" placeholder="movie name">
+
+                <input type="text" class="form-control" id="movie_name" placeholder="task">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">task Date</label>
-                <input type="date" class="form-control" id="task_Date" placeholder="task Date">
+
+                <input type="date" class="form-control" id="task_Date">
             </div>
             <div class="form-group">
 
@@ -27,12 +28,9 @@
                     placeholder="task description"></textarea>
             </div>
             <button onclick="saveMovie()" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button onclick="clearForm()" type="button" class="btn btn-success btn-lg btn-block">clear</button>
         </form>
-
     </div>
-
-
-
 
     <div id="main_container" class="container"> </div>
     <script src="index2.js"></script>

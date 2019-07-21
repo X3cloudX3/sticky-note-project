@@ -47,15 +47,18 @@ function createNewCard(movie) {
     const { movie_name, movie_year, task_description } = movie;
     if (!movie_name || !movie_year || !task_description) return;
     const stickyNoteDiv = document.createElement("div");
-    stickyNoteDiv.className = "cardBgImage"
-    stickyNoteDiv.style = "width: 190px"
-    stickyNoteDiv.style = "height: 190px"
-    stickyNoteDiv.style.border = "black solid 3px"
+    stickyNoteDiv.className = "cardBgImage p-5"
+    // stickyNoteDiv.style = "width: 50px"
+    // stickyNoteDiv.style = "height: 150px"
+    // stickyNoteDiv.style.border = "black solid 3px"
+    stickyNoteDiv.id = movie_name
 
     const cardMain = document.createElement("div");
     cardMain.className = "card mx-5 mt-5 d-inline-block ";
-    cardMain.style = "width: 18rem;"
-    cardMain.id = movie_name
+    cardMain.style = "width: 25rem;"
+    cardMain.style = "height: 10rem;"
+    cardMain.style.backgroundColor = "rgba(255, 255, 255, 0)"
+    // cardMain.id = movie_name
 
     const cardBody1 = document.createElement("div");
     cardBody1.className = "card-body";
@@ -108,7 +111,7 @@ function createNewCard(movie) {
 
     })
 
-    movie_DOM.main_container.append(cardMain)
+    movie_DOM.main_container.append(stickyNoteDiv)
 }
 
 
@@ -154,7 +157,12 @@ function findI(array, id) {
 }
 
 
-
+function clearForm() {
+    const { movie_name, movie_year, task_description } = movie_DOM;
+    task_description.value = ""
+    movie_year.value = ""
+    movie_name.value = ""
+}
 
 
 

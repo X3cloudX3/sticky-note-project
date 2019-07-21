@@ -1,6 +1,20 @@
+body{
+    background-image: url('project_details/tile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .cardBgImage{
     background-image: url('project_details/notebg.png');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    
+    width: 400px;
+    height: 400px;
+}
+
+.form_div{
+    /* background-image: url('project_details/formbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
